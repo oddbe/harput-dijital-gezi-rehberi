@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harput Dijital Gezi Rehberi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav>
+            <div class="logo">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <span>Harput Rehberi</span>
+            </div>
+
+            <button id="darkModeBtn" aria-label="Karanlık Mod">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </nav>
+
+        <div class="hero-content">
+            <p class="hero-eyebrow">Elazığ · Doğu Anadolu</p>
+            <h1>Taşın <em>Hafızasında</em><br>Bir Yürüyüş</h1>
+
+            <p>
+                Urartulardan Osmanlı'ya, surlardan kiliselere;
+                3000 yıllık Harput'u yedi durakta, adım adım keşfedin.
+            </p>
+
+            <a href="#duraklar" class="btn">
+                Rotayı Gör
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true">
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="intro">
+            <div class="intro-mark">01 / Harput</div>
+            <h2>Bir Kale, Yedi Yüzyıl</h2>
+
+            <p>
+                Harput; Urartulardan Bizans'a, Artuklulardan Akkoyunlu ve Osmanlı'ya
+                kadar birçok medeniyete ev sahipliği yapmış, Doğu Anadolu'nun en
+                önemli tarihi yerleşimlerinden biridir. Aşağıdaki rota, kaleden
+                başlayıp eski Harput'un sokaklarında ilerleyen gerçek bir yürüyüş
+                güzergâhını izler.
+            </p>
+        </section>
+
+        <section class="route-info">
+            <div class="route-info-line"></div>
+            <p>
+                <strong>Süt Kalesi</strong>'nden başlayıp <strong>Meryem Ana Kilisesi</strong>,
+                <strong>Ulu Camii</strong>, <strong>Sarahatun Camii</strong>,
+                <strong>Basın Müzesi</strong>, <strong>Şefik Gül Kültür Evi</strong>
+                ve <strong>Arap Baba Türbesi</strong> ile rotanızı tamamlayabilirsiniz.
+            </p>
+        </section>
+
+        <!-- Rota / duraklar buraya JS ile gelecek -->
+        <section id="duraklar" class="route">
+            <div class="route-spine" aria-hidden="true"></div>
+        </section>
+
+    </main>
+
+    <!-- POPUP -->
+    <div id="popup" class="popup-overlay" aria-hidden="true">
+
+        <div class="popup-card">
+
+            <button class="close-btn" onclick="closePopup()" aria-label="Kapat">
+                &times;
+            </button>
+
+            <div class="popup-media">
+                <img id="popupImage" class="popup-image" src="" alt="Mekan Fotoğrafı">
+                <span id="popupNumber" class="popup-number"></span>
+            </div>
+
+            <div class="popup-header">
+                <h2 id="popupTitle"></h2>
+            </div>
+
+            <div class="popup-body">
+
+                <p id="popupText"></p>
+
+                <div class="photo-tip">
+                    <i class="fa-solid fa-camera"></i>
+
+                    <div>
+                        <strong>En İyi Fotoğraf Noktası</strong>
+                        <span id="popupPhoto"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="popup-footer">
+
+                <a id="popupMapLink" href="#" target="_blank" rel="noopener noreferrer" class="map-btn">
+
+                    <i class="fa-solid fa-location-dot"></i>
+                    Google Maps'te Aç
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Harput Dijital Gezi Rehberi &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
